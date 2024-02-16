@@ -36,10 +36,10 @@ const submitButtonHandler = (event) => {
     event.preventDefault();
     if ((userInputHeight===undefined && userInputWeight===undefined) || (userInputHeight===undefined || userInputWeight===undefined)){
         showAlertEmpty();
+        result;
     }else{
     bmi = userInputWeight/((userInputHeight/100)**2);
     bmiElement.textContent = bmi;
-    result;
     if(bmi>18.5 && bmi<25){
         result  = "Norm";
         }
@@ -55,6 +55,10 @@ const submitButtonHandler = (event) => {
 createButtonElement.addEventListener("click", submitButtonHandler);
 
 const resetButtonHandler = () => {
+    userInputHeight = undefined;
+    userInputHeight.textContent = userInputHeight;
+    userInputWeight = undefined;
+    userInputWeight.textContent = userInputWeight;
     bmi = "";
     bmiElement.textContent = bmi;
     result = "";
