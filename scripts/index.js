@@ -1,24 +1,25 @@
 const heightInput = document.querySelector('#your-height');
 const weightInput = document.querySelector('#your-weight');
 
+const bmiElement = document.querySelector('#result1');
+const resultElement = document.querySelector('#result2');
+const createButtonElement = document.querySelector("button");
+
 let userInputHeight;
+let userInputWeight;
+
 const inputFieldHeight = (event) => {
     userInputHeight = event.target.value;
     console.log(userInputHeight);
 }
 heightInput.addEventListener('input', inputFieldHeight);
 
-let userInputWeight;
+
 const inputFieldWeight = (event) => {
     userInputWeight = event.target.value;
-    alert("Олень!")
+    // alert("Олень!")
 }
 weightInput.addEventListener('input', inputFieldWeight);
-
-const createButtonElement = document.querySelector("button");
-
-const bmiElement = document.querySelector('#result1');
-const resultElement = document.querySelector('#result2');
 
 const submitButtonHandler = (event) => {
     event.preventDefault();
@@ -29,12 +30,11 @@ const submitButtonHandler = (event) => {
         result  = "Norm";
         }
     if(bmi<18.5){
-        result = "Lower then norm"
+        result = "Lower than norm"
         }
     if(bmi>25){
-        result = "Higher then norm"
+        result = "Higher than norm"
         }
     resultElement.textContent = result;
 }
-
 createButtonElement.addEventListener("click", submitButtonHandler);
