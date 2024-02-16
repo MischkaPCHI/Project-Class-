@@ -53,7 +53,7 @@ const submitButtonHandler = (event) => {
                 result = "Higher than norm";
                 break;
         }
-    resultElement.textContent = result;
+        resultElement.textContent = result;
     }
 }
 createButtonElement.addEventListener("click", submitButtonHandler);
