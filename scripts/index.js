@@ -55,14 +55,14 @@ const submitButtonHandler = (event) => {
 createButtonElement.addEventListener("click", submitButtonHandler);
 
 const resetButtonHandler = () => {
-    userInputHeight = undefined;
-    userInputHeight.textContent = userInputHeight;
-    userInputWeight = undefined;
-    userInputWeight.textContent = userInputWeight;
     bmi = "";
     bmiElement.textContent = bmi;
     result = "";
     resultElement.textContent = result;
+    userInputHeight = undefined;
+    userInputHeight.textContent = userInputHeight;
+    userInputWeight = undefined;
+    userInputWeight.textContent = userInputWeight;
 }
 resetButtonElement.addEventListener("click", resetButtonHandler);
 
