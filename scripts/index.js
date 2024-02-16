@@ -36,7 +36,6 @@ const submitButtonHandler = (event) => {
     event.preventDefault();
     if ((userInputHeight===undefined && userInputWeight===undefined) || (userInputHeight===undefined || userInputWeight===undefined)){
         showAlertEmpty();
-        result;
     }else{
     bmi = userInputWeight/((userInputHeight/100)**2);
     bmiElement.textContent = bmi;
@@ -55,7 +54,7 @@ const submitButtonHandler = (event) => {
 createButtonElement.addEventListener("click", submitButtonHandler);
 
 const resetButtonHandler = () => {
-    bmi = "";
+    bmi = "";                                            //почему если строки 57-60 поменять с местами со строками 61-64, кнопка Reset не чистит предыдущие значения в BMI и Result?
     bmiElement.textContent = bmi;
     result = "";
     resultElement.textContent = result;
