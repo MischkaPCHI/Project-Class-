@@ -54,13 +54,14 @@ const submitButtonHandler = (event) => {
 createButtonElement.addEventListener("click", submitButtonHandler);
 
 const resetButtonHandler = () => {
-    bmi = "";                                            //почему если строки 57-60 поменять с местами со строками 61-64, кнопка Reset не чистит предыдущие значения в BMI и Result?
-    bmiElement.textContent = bmi;
-    result = "";
-    resultElement.textContent = result;
+    bmi = "";
     userInputHeight = undefined;
-    userInputHeight.textContent = userInputHeight;
+    result = "";
     userInputWeight = undefined;
+    
+    bmiElement.textContent = bmi;
+    resultElement.textContent = result;
+    userInputHeight.textContent = userInputHeight;
     userInputWeight.textContent = userInputWeight;
 }
 resetButtonElement.addEventListener("click", resetButtonHandler);
