@@ -39,14 +39,19 @@ const submitButtonHandler = (event) => {
     }else{
     bmi = userInputWeight/((userInputHeight/100)**2);
     bmiElement.textContent = bmi;
-    if(bmi>18.5 && bmi<25){
-        result  = "Norm";
-        }
-    if(bmi<18.5){
-        result = "Lower than norm";
-        }
-    if(bmi>25){
-        result = "Higher than norm";
+
+        switch(true) {
+            case bmi > 18.5 && bmi < 25:
+                result  = "Norm";
+                break;
+
+            case bmi < 18.5:
+                result = "Lower than norm";
+                break;
+
+            case bmi > 25:
+                result = "Higher than norm";
+                break;
         }
     resultElement.textContent = result;
     }
