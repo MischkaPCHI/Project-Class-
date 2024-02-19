@@ -46,11 +46,11 @@ const submitButtonHandler = (event) => {
                 break;
 
             case bmi < 18.5:
-                result = "Lower than norm";
+                result = "Lower then norm";
                 break;
 
             case bmi > 25:
-                result = "Higher than norm";
+                result = "Higher then norm";
                 break;
         }
         resultElement.textContent = result;
